@@ -1,0 +1,948 @@
+:root{
+    /*--bg_primary: #00ca90;*/
+    --primary: #2EAA49;
+    --secondary: #F2F2F2;
+    --light: #fff;
+    --dark:  #000000;
+    --transition: linear 0.3s all;
+}
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 45 Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 45 Light'), url('../font/NeueHaasDisplayLight.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 46 Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 46 Light Italic'), url('../font/NeueHaasDisplayLightItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 15 XXThin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 15 XXThin'), url('../font/NeueHaasDisplayXXThin.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 16 XXThin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 16 XXThin Italic'), url('../font/NeueHaasDisplayXXThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 25 XThin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 25 XThin'), url('../font/NeueHaasDisplayXThin.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 26 XThin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 26 XThin Italic'), url('../font/NeueHaasDisplayXThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 35 Thin';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 35 Thin'), url('../font/NeueHaasDisplayThin.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 36 Thin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 36 Thin Italic'), url('../font/NeueHaasDisplayThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 55 Roman';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 55 Roman'), url('../font/NeueHaasDisplayRoman.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 56 Roman Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 56 Roman Italic'), url('../font/NeueHaasDisplayRomanItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 65 Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 65 Medium'), url('../font/NeueHaasDisplayMediu.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 66 Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 66 Medium Italic'), url('../font/NeueHaasDisplayMediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 75 Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 75 Bold'), url('../font/NeueHaasDisplayBold.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 76 Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 76 Bold Italic'), url('../font/NeueHaasDisplayBoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 95 Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 95 Black'), url('../font/NeueHaasDisplayBlack.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Neue Haas Grotesk Display Pro 96 Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Neue Haas Grotesk Display Pro 96 Black Italic'), url('../font/NeueHaasDisplayBlackItalic.woff') format('woff');
+}
+a:hover{    
+    text-decoration: none;
+}
+.navbar-light .navbar-brand img
+{
+    max-width: 80%;
+}
+.footer-1st img{
+    max-width: 60%;
+}
+.arrow {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background: #2eaa49;
+    height: 2px;
+    width: 30px;
+}
+.showcase .arrow {
+    background: #fff !important;
+}
+.showcase .arrow:before, .showcase .arrow:after{
+    background: #fff !important;
+}
+.green-text-btn .arrow {
+    right: -40px;
+    background: #2eaa49;
+    top: 12px;
+}
+li.nav-item.contact .green-text-btn .arrow {
+    right: 18px;
+    background: #fff;
+    top: 21px;
+    width: 25px;
+}
+li.nav-item.contact .green-text-btn .arrow:before, li.nav-item.contact .green-text-btn .arrow:after {
+    background: #fff;
+}
+.arrow:before, .owl-next span:before, .owl-prev span:before {
+    right: -2px;
+    bottom: -3px;
+    transform: rotate(-45deg);
+}
+.arrow:after, .owl-next span:after, .owl-prev span:after {
+    right: -2px;
+    top: -3px;
+    transform: rotate(45deg);
+}
+.arrow:before, .arrow:after, .owl-next span:before, .owl-next span:after, .owl-prev span:before, .owl-prev span:after {
+    content: "";
+    background: #2eaa49;
+    position: absolute;
+    height: 2px;
+    width: 10px;
+}
+.owl-prev, .owl-next{
+    width: 35px;
+}
+.green-text-btn .arrow:before, .green-text-btn .arrow:after{
+    background: #2eaa49;
+}
+
+header {
+
+}
+.navbar {
+    background: var(--light) !important;
+}
+.nav-wrap {
+    max-width: 1650px;
+    font-family: 'Neue Haas Grotesk Display Pro 65 Medium';
+}
+li.nav-item {
+    padding: 0 15px;
+    overflow: hidden;
+}
+li.nav-item.contact .green-text-btn{
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 10px 50px 10px 15px;
+}
+li.nav-item.contact .green-text-btn:hover{
+    color: var(--light);
+}
+.navbar-light .navbar-nav .nav-link{
+    position: relative;
+    color: var(--dark);
+    transition: var(--transition);
+}
+.navbar-light .navbar-nav .nav-link:before{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: -150%;
+    height: 2px;
+    width: 100%;
+    background-color: var(--primary);
+    transition: var(--transition);
+    /*border-bottom: 1px solid var(--primary);*/
+}
+/*.navbar-light .navbar-nav .nav-link:hover{
+    color: var(--primary);
+}*/
+.navbar-light .navbar-nav .nav-link:hover:before{
+    left: 0;
+}
+.carousel {
+    z-index: 9;
+    border-bottom: 10px solid #2EAA49;
+}
+.slider {
+    position: relative;
+    padding: 0 30px;
+}
+.carousel-control-next, .carousel-control-prev{
+    width: 8% !important;
+}
+.carousel-control-prev .arrow, .carousel-control-next .arrow {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.carousel-control-prev .arrow{
+    transform: rotate(180deg);
+}
+.carousel-indicators .active {
+    background-color: #2eaa49;
+}
+.carousel-indicators li{
+    background-color: #222;
+}
+.slider:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background-image: url(../images/left-dark-dotted.png);
+    background-size: cover;
+    width: 68px;
+    height: 100%;
+    z-index: 999;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    background-image: url(../images/green-round.png);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    background-size: cover;
+    z-index: 1;
+}
+.events, .partner, .sponsor{
+    position: relative;
+    background-color: var(--secondary);
+    padding: 100px 0;
+    margin: -1px 30px;
+}
+.partner{
+    margin: 0 !important;
+    background-color: var(--light) !important;
+}
+.sponsor {
+    margin: 0 !important;
+}
+.events:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../images/left-greendotted.png);
+    background-size: cover;
+    width: 68px;
+    height: 100%;
+}
+h2.title {
+    position: relative;
+    font-size: 17px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+h2.title:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    background: #2EAA49;
+}
+#event-list .item, #partner-list .item, #sponsor-list .item {
+    text-align: center;
+    box-shadow: 0px 0px 5px #ddd;
+    margin: 10px;
+}
+#event-list .item img, #partner-list .item img, #sponsor-list .item img {
+    max-width: 100%;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+.owl-nav {
+    top: -40px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+}
+.owl-next span, .owl-prev span {
+    background: #2EAA49;
+    height: 2px;
+    width: 25px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    top: -3px;
+    left: 10px;
+    color: transparent;
+}
+.owl-prev span:before {
+    left: -2px;
+    bottom: -3px;
+    transform: rotate(45deg);
+}
+.owl-prev span:after {
+    left: -2px;
+    top: -3px;
+    transform: rotate(-45deg);
+}
+.owl-next span:before {
+    right: -2px;
+    bottom: -3px;
+    transform: rotate(-45deg);
+}
+
+/* .owl-carousel .owl-nav.disabled {
+    display: block;
+} */
+.exhibitors, .testimonial {
+    padding: 100px 0;
+}
+.section-wrap .nav-wrap {
+    max-width: 1380px;
+}
+.exhibitors .item, .showcase .item {
+    position: relative;
+    margin: 10px 0;
+}
+.exhibitors .item .shadow, .showcase .item .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
+}
+.exhibitors .item .title {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: var(--light);
+    font-size: 17px;
+}
+.exhibitors p{
+    max-width: 100%;
+    font-size: 13px;
+}
+.exhibitors .item .date {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: var(--light);
+}
+.exhibitors img, .showcase img {
+    max-width: 100%;
+    width: 100%;
+}
+.speaker, .showcase {
+    background: #E7EFE9;
+    padding: 100px 0;
+    position: relative;
+}
+.showcase-bg {
+    background: #2EAA49;
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    top: 0;
+}
+.showcase h2.title, .desc {
+    color: var(--light);
+    text-align: center;
+    width: 100%;
+    margin: auto;
+}
+.desc {
+    font-size: 15px;
+    width: 60%;
+    margin: 20px auto 50px auto;
+    z-index: 2;
+    position: relative;
+}
+.showcase .item .title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    color: var(--light);
+    font-size: 25px;
+    padding-top: 10px;
+    border-top: 2px solid var(--light);
+}
+.col-md-3.down {
+    margin-top: 30px;
+}
+.spk-item {
+    border-radius: 100px 0 0 100px;
+    overflow: hidden;
+    background: var(--light);
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    box-shadow: inset 0px 1px 4px rgb(0 0 0 / 15%);
+}
+.spk-img {
+    width: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.9) #2EAA49 rgba(255, 255, 255, 0.9) #2EAA49;
+    transition: var(--transition);
+}
+.spk-img:hover{
+    /* border-color: #2EAA49 rgba(255, 255, 255, 0.9) #2EAA49 rgba(255, 255, 255, 0.9); */
+    transform: rotate(90deg);
+}
+.spk-img:hover img{
+    transform: rotate(-90deg);
+}
+.spk-img img {
+    width: 100%;
+    max-width: 100%;
+    transition: var(--transition);
+}
+.spk-content {
+    width: calc(100% - 210px);
+    padding: 0 10px 0 20px;
+}
+.spk-desc {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+.green-text-btn {
+    color: #2EAA49;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.test-content {
+    font-size: 20px;
+    font-family: 'Neue Haas Grotesk Display Pro 55 Roman';
+    line-height: 32px;
+    margin-bottom: 25px;
+}
+.test-author {
+    font-size: 12px;
+}
+.test-author h6 {
+    font-size: 15px;
+}
+.test-pic {
+    float: right;
+    width: 250px;
+    height: 250px;
+    border-radius: 100% 0 100% 100%;
+    overflow: hidden;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.9) rgba(255, 255, 255, 0.9) #2EAA49;
+    transition: var(--transition);
+}
+.test-pic img {
+    max-width: 100%;
+}
+.footer-top {
+    background: #2EAA49;
+    padding: 50px;
+    text-align: center;
+    color: var(--light);
+}
+.footer-top h4 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+.btn-white {
+    background: var(--light);
+    padding: 10px 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+footer{
+    background: #000;
+    color: var(--light);
+    padding: 50px 0 20px 0;
+    font-size: 14px;
+}
+.address {
+    color: var(--light);
+    margin-top: 30px;
+}
+.social {
+    margin: 30px 0 0 0;
+    list-style: none;
+    padding: 0;
+}
+.social li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+.social li a {
+    color: var(--light);
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid var(--light);
+    margin: 0 2px;
+    font-size: 13px;
+    transition: var(--transition);
+}
+.social li.facebook a:hover{
+    background-color: #1877F2;
+    border: 1px solid #1877F2;
+}
+.social li.twitter a:hover{
+    background-color: #1DA1F2;
+    border: 1px solid #1DA1F2;
+}
+.social li.linkedin a:hover{
+    background-color: #0A66C2;
+    border: 1px solid #0A66C2;
+}
+.social li.pinterest a:hover{
+    background-color: #BD081C;
+    border: 1px solid #BD081C;
+}
+.social li.youtube a:hover{
+    background-color: #CD201F;
+    border: 1px solid #CD201F;
+}
+.footer-nav ul, .footer-nav ul li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.footer-nav ul li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+}
+.footer-nav ul li a {
+    color: var(--light);
+    text-decoration: none;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 600;
+}
+.footer-2nd h5,
+.footer-3nd h5 {
+    margin: 30px 0 35px 0;
+    font-size: 15px;
+}
+.footer-3nd {
+    float: right;
+}
+.footer-3nd .footer-nav ul li{
+    width: 100%;
+    display: block;
+}
+.footer-1st-address {
+    margin: 25px 0 0 0;
+}
+.footer-1st .address {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.footer-1st .address i {
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--light);
+    display: block;
+    line-height: 30px;
+    margin: 0 5px 0 0;
+    text-align: center;
+    color: var(--light);
+    font-size: 13px;
+}
+.footer-1st .address span {
+    width: calc(100% - 30px);
+    line-height: 16px;
+    font-size: 13px;
+}
+.copyright p{
+    margin: 20px 0 0 0;
+    font-weight: 700;
+}
+.copyright p a{
+    color: #fff;
+}
+.navbar-toggler {
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 0;
+}
+.exhibitors .button .green-text-btn,
+.speaker .button .green-text-btn {
+    color: #fff;
+    background: #2eaa49;
+    padding: 10px 45px 10px 10px;
+    font-size: 14px;
+}
+.exhibitors .button .green-text-btn .arrow,
+.speaker .button .green-text-btn .arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+.exhibitors .button .green-text-btn .arrow,
+.speaker .button .green-text-btn .arrow{
+    background: #fff;
+}
+.exhibitors .button .green-text-btn .arrow:before, .exhibitors .button .green-text-btn .arrow:after,
+.speaker .button .green-text-btn .arrow:before, .speaker .button .green-text-btn .arrow:after{
+    background: #fff;
+}
+.page-heading-area {
+    background-color: #2EAA49;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.page-heading h1 {
+    color: #eee;
+    font-weight: 700;
+    margin: 10px;
+    font-size: 26px;
+    text-transform: capitalize;
+}
+.main-content-area{
+    margin: 20px 0;
+}
+.main-event-area {
+    background-color: #ffffff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+.event-details-list {
+    margin: 0 0 35px 0;
+}
+.main-content {
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+}
+.maim-content-description{
+    padding: 20px;
+    text-align: justify;
+}
+.sidebar-inner ul li {
+    padding: 5px 20px;
+}
+.sidebar-inner ul li.sidebar-title{
+    background: #2eaa49;
+}
+.sidebar-inner ul li h3{
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+    color: #fff;
+}
+.sidebar-inner ul li a {
+    color: #2eaa49;
+    font-size: 13px;
+    padding: 0;
+}
+.sidebar-inner ul li ul {
+    display: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.sidebar-inner ul li:hover ul {
+    display: block;
+}
+.footer-content .nav-tabs{
+    display: table;
+    margin: 0 auto;
+}
+.footer-content .nav-tabs .nav-item{
+    padding: 0 !important;
+    display: inline-block;
+}
+.footer-content .nav-tabs .nav-item .nav-link, .footer-content  .nav-tabs .nav-link{
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff;
+    color: #000;
+    border: 0;
+    padding: 0 30px;
+    margin: 0;
+    outline: 0;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: inset 0px 1px 4px rgb(0 0 0 / 30%);
+}
+.footer-content .nav-tabs .nav-item.show .nav-link, .footer-content  .nav-tabs .nav-link.active {
+    color: #fff;
+    background: var(--primary);
+}
+.tab-content {
+    border: 1px solid #000;
+    margin: 20px 0;
+    background: whitesmoke;
+}
+.contact-page {
+    display: flex;
+    align-items: center;
+}
+.contact-adress {
+    width: 50%;
+    padding: 30px 15px;
+}
+.contact-map {
+    width: 50%;
+}
+.contact-adress ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.contact-adress ul h3 {
+    font-size: 18px;
+}
+.contact-adress ul li {
+    display: flex;
+    margin: 10px 0;
+    align-items: center;
+}
+.contact-adress ul li i {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    background: #222;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 10px 0 0;
+}
+.contact-adress ul li span {
+    line-height: 18px;
+    font-size: 13px;
+    width: calc(100% - 30px);
+}
+.contact_form {
+    margin: 20px 0 0 0;
+}
+.contact_form .form-control {
+    border-radius: 0;
+    color: var(--dark);
+    outline: 0;
+    border-bottom: 1px solid var(--primary);
+}
+.contact_form .form-control:focus {
+    box-shadow: none;
+    border: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--primary);
+}
+.btn-basic-sm {
+    background: var(--primary);
+    border: 0;
+    padding: 0 32px;
+    height: 40px;
+    border-radius: 0;
+    color: #fff;
+    line-height: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+}
+.application-form.main-content {
+    padding: 20px;
+}
+.application-form.main-content label {
+    font-size: 11px !important;
+    font-weight: 700;
+}
+.application-form.main-content .form-group select.form-control,
+.application-form.main-content .form-group input.form-control {
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    border-radius: 0;
+    padding: 0 15px;
+    border-bottom: 1px solid #2eaa49;
+}
+textarea.form-control {
+    border-radius: 0;
+    border-bottom: 1px solid #2eaa49;
+}
+.font-10 {
+    font-size: 8px !important;
+}
+.application-form.main-content .form-group .form-control:focus {
+    color: #2eaa49;
+    background-color: #fff;
+    border-color: #000;
+    outline: 0;
+    box-shadow: none;
+}
+
+.exhibitors .button, .speaker .button {
+    position: relative;
+    text-align: center;
+    margin: 20px auto 0 auto;
+    width: 12%;
+}
+.customBtn {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    background-color: #222;
+    padding: 8px 40px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+    border-radius: 0;
+    width: 190px;
+  }
+  
+  .customBtn span {
+    position: relative; 
+    z-index: 1;
+  }
+  
+  .customBtn:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: var(--primary);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-75%) translateY(-25%) rotate(45deg);
+  }
+  .customBtn:hover{
+      color: #fff;
+  }
+  .customBtn:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+  .customBtn:focus{
+      outline: 0;
+      box-shadow: none;
+  }
+h5.name {
+    font-size: 15px;
+}
+ul.navbar-nav {
+    width: 100%;
+}
+.card {
+    border-radius: 0;
+}
+.card-body{
+    padding: 10px 20px;
+}
+.card-title{
+    margin: 0 0 10px 0;
+    font-size: 17px;
+}
+.card-body p{
+    margin: 5px 0;
+    font-size: 13px;
+}
+.card-body .customBtn {
+    width: 100%;
+}
+.copyright {
+    text-align: center;
+    border-top: 1px solid #484848;
+    margin: 20px 0 0 0;
+}

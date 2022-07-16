@@ -23,7 +23,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        Gate::authorize('user.index');
+        Gate::authorize('admin.user.index');
         $data['users'] = User::latest()->get();
         return view('admin.user.index', $data);
     }
@@ -35,7 +35,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        Gate::authorize('user.create');
+        Gate::authorize('admin.user.create');
         $data['roles'] = Role::get();
         return view('admin.user.form', $data);
     }
@@ -48,27 +48,18 @@ class UserController extends Controller
      */
     public function store(CreateUserRequest $request)
     {
-        // Upload Image
-        if($request->hasFile('avatar')){
-            $image_tmp = $request->file('avatar');
-            if ($image_tmp->isValid()) {
-                // Upload Images after Resize
-                $extension = $image_tmp->getClientOriginalExtension();
-                $fileName = Str::slug($request->name).'.'.$extension;
-                $path = 'media/user/'.$fileName;
-                Image::make($image_tmp)->save($path);
-            }
-        }
         $user = User::create([
             'role_id' => $request->role,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'status' => $request->filled('status'),
-            'avatar' => $fileName,
         ]);
+        if ($request->hasFile('avatar')) {
+            $user->addMedia($request->avatar)->toMediaCollection('avatar');
+        }
         notify()->success('User Successfully Added.', 'Added');
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
 
     /**
@@ -79,7 +70,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {        
-        Gate::authorize('user.edit');
+        Gate::authorize('admin.user.edit');
         $roles = Role::get();
         return view('admin.user.form')->with(compact('roles','user'));
     }
@@ -92,7 +83,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {        
-        Gate::authorize('user.edit');
+        Gate::authorize('admin.user.edit');
         $roles = Role::get();
         return view('admin.user.form')->with(compact('roles','user'));
     }
@@ -106,30 +97,20 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request, User $user)
     {
-        if($request->hasFile('avatar')){
-            $image_tmp = $request->file('avatar');
-            if ($image_tmp->isValid()) {
-                // Delete old image if exists
-                $imagePath = public_path('media/user/'.$user->avatar);
-                if(File::exists($imagePath)){
-                    File::delete($imagePath);
-                }
-                $extension = $image_tmp->getClientOriginalExtension();
-                $fileName = Str::slug($request->name).'.'.$extension;
-                $path = 'media/user/'.$fileName;
-                Image::make($image_tmp)->save($path);
-            }
-        }
         $user->update([
             'role_id'   => $request->role,
             'name'      => $request->name,
             'email'     => $request->email,
             'password'  => isset($request->password) ? Hash::make($request->password) : $user->password,
             'status'    => $request->filled('status'),
-            'avatar'     => $fileName,
         ]);
+        
+        // upload images
+        if ($request->hasFile('avatar')) {
+            $user->addMedia($request->avatar)->toMediaCollection('avatar');
+        }
         notify()->success('User Successfully Updated.', 'Updated');
-        return redirect()->route('user.index');
+        return redirect()->route('admin.user.index');
     }
 
     /**
@@ -140,12 +121,7 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        Gate::authorize('user.destroy');
-        // Delete old image if exists
-        $imagePath = public_path('media/user/'.$user->avatar);
-        if(File::exists($imagePath)){
-            File::delete($imagePath);
-        }
+        Gate::authorize('admin.user.destroy');
         $user->delete();        
         notify()->success("User Successfully Deleted", "Deleted");
         return back();

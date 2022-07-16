@@ -17,7 +17,7 @@
             </div>
             <div class="page-title-actions">
                 <div class="d-inline-block dropdown">
-                    <a href="{{ route('role.create') }}" class="btn-shadow btn btn-info">
+                    <a href="{{ route('admin.role.create') }}" class="btn-shadow btn btn-info">
                         <span class="btn-icon-wrapper pr-2 opacity-7">
                             <i class="fas fa-plus-circle fa-w-20"></i>
                         </span>
@@ -55,7 +55,7 @@
                                 </td>
                                 <td class="text-center">{{ $role->created_at->diffForHumans() }}</td>
                                 <td class="text-center">
-                                    <a class="btn btn-info btn-sm" href="{{ route('role.edit',$role->id) }}"><i
+                                    <a class="btn btn-info btn-sm" href="{{ route('admin.role.edit',$role->id) }}"><i
                                             class="fas fa-edit"></i>
                                         <span>Edit</span>
                                     </a>
@@ -66,7 +66,7 @@
                                             <span>Delete</span>
                                         </button>
                                         <form id="delete-form-{{ $role->id }}"
-                                              action="{{ route('role.destroy',$role->id) }}" method="POST"
+                                              action="{{ route('admin.role.destroy',$role->id) }}" method="POST"
                                               style="display: none;">
                                             @csrf()
                                             @method('DELETE')

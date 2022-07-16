@@ -23,7 +23,6 @@ class UserSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@gmail.com',
             'password' => Hash::make('123456'),
-            'avatar' => Null,
             'status' => true
         ]);
 
@@ -34,7 +33,6 @@ class UserSeeder extends Seeder
             'name' => 'Jone Doe',
             'email' => 'user@gmail.com',
             'password' => Hash::make('123456'),
-            'avatar' => Null,
             'status' => true
         ]);
     }

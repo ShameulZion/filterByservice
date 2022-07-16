@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+    <title>@yield('title')</title>
+    <link rel="icon" type="image/x-icon" href="{{ setting('site_favicon') != null ?  Storage::disk('media')->url(setting('site_favicon')) : '' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+    <meta name="description" content="@yield('description')">
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="stylesheet" href="{{ asset('backend/assets/styles/dropify.css')}}" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">

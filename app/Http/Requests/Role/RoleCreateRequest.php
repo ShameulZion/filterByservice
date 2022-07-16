@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Requests\Role;
-use Illuminate\Support\Facades\Gate;
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RoleCreateRequest extends FormRequest
@@ -14,7 +14,7 @@ class RoleCreateRequest extends FormRequest
      */
     public function authorize()
     {
-        Gate::authorize('role.create');
+        Gate::authorize('admin.role.create');
         return true;
     }
 

@@ -18,7 +18,7 @@
             </div>
             <div class="page-title-actions">
                 <div class="d-inline-block dropdown">
-                    <a href="{{ route('user.create') }}" class="btn-shadow btn btn-info">
+                    <a href="{{ route('admin.user.create') }}" class="btn-shadow btn btn-info">
                         <span class="btn-icon-wrapper pr-2 opacity-7">
                             <i class="fas fa-plus-circle fa-w-20"></i>
                         </span>
@@ -52,7 +52,7 @@
                                             <div class="widget-content-wrapper">
                                                 <div class="widget-content-left mr-3">
                                                     <div class="widget-content-left">
-                                                        <img width="80" height="80" src="{{ asset('/media/user/'.$user->avatar) }}" alt="{{ $user->name }}">
+                                                        <img width="80" height="80" src="{{ isset($user) ? $user->getFirstMediaUrl('avatar') : ''  }}" alt="{{ $user->name }}">
                                                     </div>
                                                 </div>
                                                 <div class="widget-content-left flex2">
@@ -78,11 +78,11 @@
                                     </td>
                                     <td class="text-center">{{ $user->created_at->diffForHumans() }}</td>
                                     <td class="text-center">
-                                        <a class="btn btn-secondary btn-sm" href="{{ route('user.show',$user->id) }}"><i
+                                        <a class="btn btn-secondary btn-sm" href="{{ route('admin.user.show',$user->id) }}"><i
                                                 class="fas fa-eye"></i>
                                             <span>Show</span>
                                         </a>
-                                        <a class="btn btn-info btn-sm" href="{{ route('user.edit',$user->id) }}"><i
+                                        <a class="btn btn-info btn-sm" href="{{ route('admin.user.edit',$user->id) }}"><i
                                                 class="fas fa-edit"></i>
                                             <span>Edit</span>
                                         </a>
@@ -92,7 +92,7 @@
                                             <span>Delete</span>
                                         </button>
                                         <form id="delete-form-{{ $user->id }}"
-                                              action="{{ route('user.destroy',$user->id) }}" method="POST"
+                                              action="{{ route('admin.user.destroy',$user->id) }}" method="POST"
                                               style="display: none;">
                                             @csrf()
                                             @method('DELETE')

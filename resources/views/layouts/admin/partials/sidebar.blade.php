@@ -33,116 +33,98 @@
     <div class="scrollbar-sidebar">
         <div class="app-sidebar__inner">
             <ul class="vertical-nav-menu">
-                <li class="app-sidebar__heading">Dashboards</li>
+                <!-- <li class="app-sidebar__heading">Dashboards</li> -->
                 <li>
-                    <a href="{{ route('dashboard') }}" class="mm-active">
+                    <a href="{{ route('admin.dashboard') }}" class="mm-active">
                         <i class="metismenu-icon pe-7s-rocket"></i> Dashboard
                     </a>
                 </li>
                 
-                <li class="app-sidebar__heading">User & Roles</li>
+                <!-- <li class="app-sidebar__heading">User & Roles</li> -->
                 <li>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-diamond"></i> User & Roles <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
                         <li>
-                            <a href="{{ route('role.index') }}">
+                            <a href="{{ route('admin.role.index') }}">
                                 <i class="metismenu-icon"></i>Roles
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('user.index') }}">
+                            <a href="{{ route('admin.user.index') }}">
                                 <i class="metismenu-icon"></i>Users
                             </a>
                         </li>
                     </ul>
                 </li>
 
-                <li class="app-sidebar__heading">Services</li>
-                <li>
-                    <a href="#">
-                        <i class="metismenu-icon pe-7s-diamond"></i>Services <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                    </a>
-                    <ul>
-                        <li>
-                            <a href="{{ route('service.index') }}">
-                                <i class="metismenu-icon"></i> All Service
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('service.create') }}">
-                                <i class="metismenu-icon"></i> Add Service
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('department.index') }}">
-                                <i class="metismenu-icon"></i> Departmets
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('category.index') }}">
-                                <i class="metismenu-icon"></i> Categories
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('tag.index') }}">
-                                <i class="metismenu-icon"></i> Tags
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <i class="metismenu-icon"></i> Filter <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
-                            </a>
-                            <ul class="mm-collapse" style="height: 7.48px;">
-                                <li>
-                                    <a href="{{ route('filterProfile.index') }}">
-                                        <i class="metismenu-icon"></i> Filter Profile
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('filter.index') }}">
-                                        <i class="metismenu-icon"></i> Filter
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-
-                <!-- <li class="app-sidebar__heading">Catalog</li>
+                <!-- <li class="app-sidebar__heading">Catalog</li> -->
                 <li>
                     <a href="#">
                         <i class="metismenu-icon pe-7s-diamond"></i>Catalog <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul>
                         <li>
-                            <a href="">
-                                <i class="metismenu-icon"></i>Pages
+                            <a href="{{ route('admin.page.index') }}">
+                                <i class="metismenu-icon"></i> Pages
                             </a>
                         </li>
                         <li>
                             <a href="">
-                                <i class="metismenu-icon"></i>Menus
+                                <i class="metismenu-icon"></i> Menu
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <i class="metismenu-icon"></i>Slider
+                            <a href="{{ route('admin.news.index') }}">
+                                <i class="metismenu-icon"></i> News
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <i class="metismenu-icon"></i>News
+                            <a href="{{ route('admin.event.index') }}">
+                                <i class="metismenu-icon"></i> Events
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                                <i class="metismenu-icon"></i>Media
+                            <a href="{{ route('admin.testimonial.index') }}">
+                                <i class="metismenu-icon"></i> Testimonials
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.speaker.index') }}">
+                                <i class="metismenu-icon"></i> Speakers
                             </a>
                         </li>
                     </ul>
-                </li> -->
+                </li>
+                <!-- <li class="app-sidebar__heading">Catalog</li> -->
+                <li>
+                    <a href="#">
+                        <i class="metismenu-icon pe-7s-diamond"></i>System <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="{{ route('admin.setting.index') }}">
+                                <i class="metismenu-icon"></i> Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.slider.index') }}">
+                                <i class="metismenu-icon"></i> Sliders
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.banner.index') }}">
+                                <i class="metismenu-icon"></i> Banners
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.registration.index') }}">
+                                <i class="metismenu-icon"></i> Registration Form
+                            </a>
+                        </li>
+                    </ul>
+                </li>       
             </ul>
         </div>
     </div>

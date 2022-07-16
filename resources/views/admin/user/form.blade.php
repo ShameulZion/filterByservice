@@ -18,7 +18,7 @@
             </div>
             <div class="page-title-actions">
                 <div class="d-inline-block dropdown">
-                    <a href="{{ route('user.index') }}" class="btn-shadow btn btn-danger">
+                    <a href="{{ route('admin.user.index') }}" class="btn-shadow btn btn-danger">
                         <span class="btn-icon-wrapper pr-2 opacity-7">
                             <i class="fas fa-arrow-circle-left fa-w-20"></i>
                         </span>
@@ -32,7 +32,7 @@
     <div class="row">
         <div class="col-12">
             <!-- form start -->
-            <form role="form" id="userFrom" method="POST" action="{{ isset($user) ? route('user.update',$user->id) : route('user.store') }}" enctype="multipart/form-data">
+            <form role="form" id="userFrom" method="POST" action="{{ isset($user) ? route('admin.user.update',$user->id) : route('admin.user.store') }}" enctype="multipart/form-data">
                 @csrf
                 @if (isset($user))
                     @method('PUT')

@@ -20,7 +20,7 @@ class PermissionSeeder extends Seeder
         Permission::updateOrCreate([
             'module_id' => $moduleAdminDashboard->id,
             'name' => 'Access Dashboard',
-            'slug' => 'dashboard',
+            'slug' => 'admin.dashboard',
         ]);
 
         // Role management
@@ -28,22 +28,22 @@ class PermissionSeeder extends Seeder
         Permission::updateOrCreate([
             'module_id' => $moduleAdminRole->id,
             'name' => 'Access Roles',
-            'slug' => 'role.index',
+            'slug' => 'admin.role.index',
         ]);
         Permission::updateOrCreate([
             'module_id' => $moduleAdminRole->id,
             'name' => 'Create Role',
-            'slug' => 'role.create',
+            'slug' => 'admin.role.create',
         ]);
         Permission::updateOrCreate([
             'module_id' => $moduleAdminRole->id,
             'name' => 'Edit Role',
-            'slug' => 'role.edit',
+            'slug' => 'admin.role.edit',
         ]);
         Permission::updateOrCreate([
             'module_id' => $moduleAdminRole->id,
             'name' => 'Delete Role',
-            'slug' => 'role.destroy',
+            'slug' => 'admin.role.destroy',
         ]);
 
         // User management
@@ -51,139 +51,140 @@ class PermissionSeeder extends Seeder
         Permission::updateOrCreate([
             'module_id' => $moduleAdminUser->id,
             'name' => 'Access Users',
-            'slug' => 'user.index',
+            'slug' => 'admin.user.index',
         ]);
         Permission::updateOrCreate([
             'module_id' => $moduleAdminUser->id,
             'name' => 'Create User',
-            'slug' => 'user.create',
+            'slug' => 'admin.user.create',
         ]);
         Permission::updateOrCreate([
             'module_id' => $moduleAdminUser->id,
             'name' => 'Edit User',
-            'slug' => 'user.edit',
+            'slug' => 'admin.user.edit',
         ]);
         Permission::updateOrCreate([
             'module_id' => $moduleAdminUser->id,
             'name' => 'Delete User',
-            'slug' => 'user.destroy',
+            'slug' => 'admin.user.destroy',
         ]);
 
-        // Department management
-        $moduleAdminDepartment = Module::updateOrCreate(['name' => 'Service Department Management']);
+        // News management
+        $moduleAdminNews = Module::updateOrCreate(['name' => 'News Management']);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminDepartment->id,
-            'name' => 'Access Departments',
-            'slug' => 'department.index',
+            'module_id' => $moduleAdminNews->id,
+            'name' => 'Access News',
+            'slug' => 'admin.news.index',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminDepartment->id,
-            'name' => 'Create Department',
-            'slug' => 'department.create',
+            'module_id' => $moduleAdminNews->id,
+            'name' => 'Create News',
+            'slug' => 'admin.news.create',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminDepartment->id,
-            'name' => 'Edit Department',
-            'slug' => 'department.edit',
+            'module_id' => $moduleAdminNews->id,
+            'name' => 'Edit News',
+            'slug' => 'admin.news.edit',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminDepartment->id,
-            'name' => 'Delete Department',
-            'slug' => 'department.destroy',
-        ]);
-
-        // Category management
-        $moduleAdminCategory = Module::updateOrCreate(['name' => 'Service Categories Management']);
-        Permission::updateOrCreate([
-            'module_id' => $moduleAdminCategory->id,
-            'name' => 'Access Categories',
-            'slug' => 'category.index',
-        ]);
-        Permission::updateOrCreate([
-            'module_id' => $moduleAdminCategory->id,
-            'name' => 'Create Category',
-            'slug' => 'category.create',
-        ]);
-        Permission::updateOrCreate([
-            'module_id' => $moduleAdminCategory->id,
-            'name' => 'Edit Category',
-            'slug' => 'category.edit',
-        ]);
-        Permission::updateOrCreate([
-            'module_id' => $moduleAdminCategory->id,
-            'name' => 'Delete Category',
-            'slug' => 'category.destroy',
+            'module_id' => $moduleAdminNews->id,
+            'name' => 'Delete News',
+            'slug' => 'admin.news.destroy',
         ]);
 
-        
-        // Tags management
-        $moduleAdminTags = Module::updateOrCreate(['name' => 'Service Tags Management']);
+        // Event management
+        $moduleAdminEvent = Module::updateOrCreate(['name' => 'Events Management']);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminTags->id,
-            'name' => 'Access Tags',
-            'slug' => 'tag.index',
+            'module_id' => $moduleAdminEvent->id,
+            'name' => 'Access Events',
+            'slug' => 'admin.event.index',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminTags->id,
-            'name' => 'Create Tag',
-            'slug' => 'tag.create',
+            'module_id' => $moduleAdminEvent->id,
+            'name' => 'Create Events',
+            'slug' => 'admin.event.create',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminTags->id,
-            'name' => 'Edit Tag',
-            'slug' => 'tag.edit',
+            'module_id' => $moduleAdminEvent->id,
+            'name' => 'Edit Events',
+            'slug' => 'admin.event.edit',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminTags->id,
-            'name' => 'Delete Tag',
-            'slug' => 'tag.destroy',
+            'module_id' => $moduleAdminEvent->id,
+            'name' => 'Delete Events',
+            'slug' => 'admin.event.destroy',
         ]);
 
         
-        // Service management
-        $moduleAdminServices = Module::updateOrCreate(['name' => 'Service Management']);
+        // Testimonial management
+        $moduleAdminTestimonial = Module::updateOrCreate(['name' => 'Testimonial Management']);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminServices->id,
-            'name' => 'Access Services',
-            'slug' => 'service.index',
+            'module_id' => $moduleAdminTestimonial->id,
+            'name' => 'Access Testimonials',
+            'slug' => 'admin.testimonial.index',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminServices->id,
-            'name' => 'Create Service',
-            'slug' => 'service.create',
+            'module_id' => $moduleAdminTestimonial->id,
+            'name' => 'Create Testimonial',
+            'slug' => 'admin.testimonial.create',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminServices->id,
-            'name' => 'Edit Service',
-            'slug' => 'service.edit',
+            'module_id' => $moduleAdminTestimonial->id,
+            'name' => 'Edit Testimonial',
+            'slug' => 'admin.testimonial.edit',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminServices->id,
-            'name' => 'Delete Service',
-            'slug' => 'service.destroy',
+            'module_id' => $moduleAdminTestimonial->id,
+            'name' => 'Delete Testimonial',
+            'slug' => 'admin.testimonial.destroy',
         ]);
 
-        // Filter and Filter Profile Management
-        $moduleAdminFilter = Module::updateOrCreate(['name' => 'Filter Management']);
+        
+        // Speaker management
+        $moduleAdminSpeaker = Module::updateOrCreate(['name' => 'Speaker Management']);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminFilter->id,
-            'name' => 'Access Filter',
-            'slug' => 'filterProfile.index',
+            'module_id' => $moduleAdminSpeaker->id,
+            'name' => 'Access Speakers',
+            'slug' => 'admin.speaker.index',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminFilter->id,
-            'name' => 'Create Filter',
-            'slug' => 'filterProfile.create',
+            'module_id' => $moduleAdminSpeaker->id,
+            'name' => 'Create Speaker',
+            'slug' => 'admin.speaker.create',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminFilter->id,
-            'name' => 'Edit Filter',
-            'slug' => 'filterProfile.edit',
+            'module_id' => $moduleAdminSpeaker->id,
+            'name' => 'Edit Speaker',
+            'slug' => 'admin.speaker.edit',
         ]);
         Permission::updateOrCreate([
-            'module_id' => $moduleAdminFilter->id,
-            'name' => 'Delete Filter',
-            'slug' => 'filterProfile.destroy',
+            'module_id' => $moduleAdminSpeaker->id,
+            'name' => 'Delete Speaker',
+            'slug' => 'admin.speaker.destroy',
+        ]);
+
+        
+        // Banner management
+        $moduleAdminBanner = Module::updateOrCreate(['name' => 'Banner Management']);
+        Permission::updateOrCreate([
+            'module_id' => $moduleAdminBanner->id,
+            'name' => 'Access Banner',
+            'slug' => 'admin.banner.index',
+        ]);
+        Permission::updateOrCreate([
+            'module_id' => $moduleAdminBanner->id,
+            'name' => 'Create Banner',
+            'slug' => 'admin.banner.create',
+        ]);
+        Permission::updateOrCreate([
+            'module_id' => $moduleAdminBanner->id,
+            'name' => 'Edit Banner',
+            'slug' => 'admin.banner.edit',
+        ]);
+        Permission::updateOrCreate([
+            'module_id' => $moduleAdminBanner->id,
+            'name' => 'Delete Banner',
+            'slug' => 'admin.banner.destroy',
         ]);
     }
 }

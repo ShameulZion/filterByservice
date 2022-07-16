@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Role;
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RoleUpdateRequest extends FormRequest
@@ -13,7 +14,7 @@ class RoleUpdateRequest extends FormRequest
      */
     public function authorize()
     {
-        Gate::authorize('role.edit');
+        Gate::authorize('admin.role.edit');
         return true;
     }
 

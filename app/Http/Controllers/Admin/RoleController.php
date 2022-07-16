@@ -21,7 +21,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        Gate::authorize('role.index');
+        Gate::authorize('admin.role.index');
         $data['roles'] = Role::withCount('permissions')->latest()->get();
         return view('admin.role.index', $data);
     }
@@ -33,7 +33,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        Gate::authorize('role.create');
+        Gate::authorize('admin.role.create');
         $data['modules'] = Module::get();
         return view('admin.role.form', $data);
     }
@@ -51,7 +51,7 @@ class RoleController extends Controller
             'slug' => Str::slug($request->name),
         ])->permissions()->sync($request->input('permissions', []));
         notify()->success('Role Successfully Added.', 'Added');
-        return redirect()->route('role.index');
+        return redirect()->route('admin.role.index');
     }
 
     /**
@@ -62,7 +62,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        Gate::authorize('role.edit');
+        Gate::authorize('admin.role.edit');
         $modules = Module::get();
         return view('admin.role.form')->with(compact('role','modules'));
     }
@@ -82,7 +82,7 @@ class RoleController extends Controller
         ]);
         $role->permissions()->sync($request->input('permissions', []));
         notify()->success('Role Successfully Updated.', 'Updated');
-        return redirect()->route('role.index');
+        return redirect()->route('admin.role.index');
     }
 
     /**
@@ -93,7 +93,7 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        Gate::authorize('role.destroy');
+        Gate::authorize('admin.role.destroy');
         if ($role->deletable) {
             $role->delete();
             notify()->success("Role Successfully Deleted", "Deleted");
